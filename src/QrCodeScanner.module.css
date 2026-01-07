@@ -1,0 +1,7 @@
+.qr_scanner_block{
+	width: 152px!important;
+	height: 152px!important;
+	margin: 0 auto;
+	border:1px solid #bababa;
+	border-radius: 5px;
+}

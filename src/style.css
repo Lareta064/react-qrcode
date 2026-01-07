@@ -1,0 +1,38 @@
+*{box-sizing: border-box;}
+.qrcode-block-wrapper{
+	display: flex;
+	width: 300px;
+	flex-direction: column;
+	gap:16px;
+}
+.form-item{
+	position: relative;
+	
+}
+.form-item input{
+	width: 100%;
+	
+	display: block;
+	height: 48px;
+	padding-left: 12px;
+	padding-right: 12px;
+    border-radius: 5px;
+	border:1px solid #bababa;
+}
+.btn{
+	display: inline-block;
+	height: 50px;
+	width: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-size: 18px;
+	
+	color: white;
+	font-family:sans-serif;
+	background-color: rgb(52, 52, 138);
+}
+.qr-content{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 40px;
+}
