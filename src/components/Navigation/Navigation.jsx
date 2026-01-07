@@ -5,8 +5,8 @@ const Navigation = () => {
 			<nav className="page-nav">
 				<Link to="/generate">Генерировать </Link>
 				<Link to="/scan">Сканировать </Link>
-				<Link to="/">История генерирования </Link>
-				<Link to="/">История сканирования</Link>
+				<Link to="/genhistory">История генерирования </Link>
+				<Link to="/scanhistory">История сканирования</Link>
 			</nav>
 		</div>
 	 );
