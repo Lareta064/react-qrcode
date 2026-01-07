@@ -2,6 +2,7 @@ import { Scanner } from '@yudiel/react-qr-scanner';
 
 import s from './QrCodeScanner.module.css';
 import { useState } from 'react';
+import {SCAN_DATA} from '../../const';
 const QrCodeScanner = () => {
 	
 	const classNames ={
@@ -13,8 +14,12 @@ const QrCodeScanner = () => {
 	}
     const [scanedText, setScanedText] = useState('');
 	const scanHandler = (result)=>{
+
 		setScanedText(result[0].rawValue);
+		const prevData = JSON.parse(localStorage.getItem(SCAN_DATA) || '[]');
+		localStorage.setItem(SCAN_DATA, JSON.stringify([...prevData, result[0].rawValue]));
 	}
+	
 	return ( 
 		
 		<div className="qrcode-block-wrapper">
@@ -27,9 +32,7 @@ const QrCodeScanner = () => {
 				onError={(error) => console.log(error?.message)}
 				/>
 
-			<div className="form-item">
-				<input type="text"  value={scanedText} />
-			</div>
+			<p className="scann-result">{scanedText}</p>
 		</div>
 		
 	);

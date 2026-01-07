@@ -1,4 +1,14 @@
 *{box-sizing: border-box;}
+body{
+	font-family: sans-serif;
+	padding-top: 40px;
+}
+.container{
+	max-width: 1140px;
+	margin: 0 auto;
+	padding-inline: 20px;
+
+}
 .qrcode-block-wrapper{
 	display: flex;
 	width: 300px;
@@ -32,7 +42,19 @@
 	background-color: rgb(52, 52, 138);
 }
 .qr-content{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	display:flex;
+	justify-content: center;
+	padding-top: 80px;
+}
+.page-nav{
+	display: flex;
 	column-gap: 40px;
+	justify-content: center;
+}
+.page-nav a{
+	text-decoration: none;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #1b1b1b;
+
 }
