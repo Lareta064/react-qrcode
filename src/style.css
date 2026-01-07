@@ -58,3 +58,30 @@ body{
 	color: #1b1b1b;
 
 }
+.hist-wrapper{
+	width: 100%;
+}
+.hist-list{
+	list-style: none;
+	display: flex;
+	flex-wrap:wrap;
+	gap: 50px;
+	
+}
+.hist-item{
+	width: fit-content;
+	min-width: 300px;
+	display: flex;
+	column-gap:30px;
+	align-items: center;
+	padding-block:15px;
+}
+.hist-item{border-bottom:1px solid #dadada}
+.hist-item svg{
+	flex-shrink: 0;
+}
+.hist-item p{
+	font-size: 20px;
+	font-weight: 700;
+	min-width: 100px;
+}

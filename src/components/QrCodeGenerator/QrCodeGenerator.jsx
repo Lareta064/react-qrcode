@@ -1,4 +1,5 @@
 import {QRCodeSVG} from 'qrcode.react';
+import ReactDOM from 'react-dom';
 import { useState } from 'react';
 import {GENERATE_DATA} from "../../const";
 import s from './QrCodeGenerator.module.css';
