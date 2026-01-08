@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 const Navigation = () => {
 	const thisClass = 'page-nav-item';
 	const thisActiveClass = 'page-nav-item page-nav-item--active';
+	
 	return (
 		<div className="container">
 			<nav className="page-nav">
