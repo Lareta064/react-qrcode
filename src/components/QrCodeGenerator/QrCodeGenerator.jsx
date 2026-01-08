@@ -23,9 +23,8 @@ const QrCodeGenerator = () => {
 		<div className="qrcode-block-wrapper">
 			<div className={s.qrcode_image}>
 				
-				{result !=='' && (
-					<QRCodeSVG value= {value} />
-					)
+				{result !=='' && <QRCodeSVG value= {result} />
+				
 				}
 				
 			</div>
