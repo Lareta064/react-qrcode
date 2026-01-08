@@ -1,7 +1,9 @@
 *{box-sizing: border-box;}
 body{
 	font-family: sans-serif;
-	padding-top: 40px;
+}
+h1, h2, h3, h4, p, ul, ol{
+	margin: 0;padding: 0;
 }
 .container{
 	max-width: 1140px;
@@ -9,15 +11,27 @@ body{
 	padding-inline: 20px;
 
 }
+.header{
+	padding-block: 12px;
+	text-align: center;
+	background-color: #f7f7f7;
+	margin-bottom: 16px;
+	.h1{font-size: 28px;}
+}
 .qrcode-block-wrapper{
 	display: flex;
-	width: 300px;
+	width: 330px;
 	flex-direction: column;
 	gap:16px;
 }
 .form-item{
 	position: relative;
 	
+}
+.form-label{
+	font-size: 13px;
+	margin-bottom: .5em;
+	display: block;
 }
 .form-item input{
 	width: 100%;
@@ -44,12 +58,19 @@ body{
 .qr-content{
 	display:flex;
 	justify-content: center;
-	padding-top: 80px;
+	padding-top: 40px;
 }
 .page-nav{
 	display: flex;
 	justify-content: center;
-	
+	@media (max-width: 767px) {
+		justify-content: flex-start;
+		width: calc(50% + 50vw);
+		overflow: hidden;
+		overflow-x: scroll;
+		scrollbar-width: none;
+		&::-webkit-scrollbar{display: none;}
+	}
 }
 .page-nav-item{
 	text-decoration: none;
@@ -62,6 +83,11 @@ body{
 	border-bottom: 1px solid #dedede;
 	border-radius: 5px 5px 0 0;
 	height: 40px;
+
+	@media (max-width: 767px) {
+	 padding-inline:12px;
+	 white-space: nowrap;
+	}
 }
 .page-nav-item.page-nav-item--active{
 	color:rgb(21, 57, 204);
@@ -76,23 +102,53 @@ body{
 	list-style: none;
 	display: flex;
 	flex-wrap:wrap;
-	gap: 50px;
+	gap: 40px;
+	@media (max-width: 767px) {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	gap: 0;
+	}
 	
 }
 .hist-item{
 	width: fit-content;
-	min-width: 300px;
+	width: calc(50% - 20px);
+	 max-width: 330px;
 	display: flex;
 	column-gap:30px;
 	align-items: center;
 	padding-block:15px;
+	
+	
+	@media (max-width: 1023px) {
+	  min-width: 220px;
+	  
+	  column-gap:15px;
+	}
+	@media (max-width: 767px) {
+	width: 100%;
+	 max-width: 330px;
+	 
+	}
 }
 .hist-item{border-bottom:1px solid #dadada}
 .hist-item svg{
 	flex-shrink: 0;
+	width: 80px!important;
+	height: 80px!important;
+	@media (max-width: 767px) {
+	width: 50px!important;
+	height: 50px!important;
+	}
 }
 .hist-item p{
 	font-size: 20px;
 	font-weight: 700;
 	min-width: 100px;
+	@media (max-width: 1023px) {
+	font-size: 18px;
+	}
+	@media (max-width: 767px) {
+	font-size: 14px;
+	}
 }

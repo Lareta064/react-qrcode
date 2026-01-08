@@ -2,7 +2,7 @@ import {QRCodeSVG} from 'qrcode.react';
 import ReactDOM from 'react-dom';
 import { useState } from 'react';
 import {GENERATE_DATA} from "../../const";
-import s from './QrCodeGenerator.module.css';
+import s from './QrCodeGenerator.module.scss';
 
 const QrCodeGenerator = () => {
 	const [value, setValue] = useState('');
@@ -30,6 +30,7 @@ const QrCodeGenerator = () => {
 				
 			</div>
 			<div className="form-item">
+				<label className="form-label">Введите текст, что бы сгенерировать для него qr-code</label>
 				<input type="text"  value={value} onChange={onChangeHandler} />
 			</div>
 			<div className="form-btn">

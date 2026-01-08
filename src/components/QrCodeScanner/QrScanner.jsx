@@ -1,6 +1,6 @@
 import { Scanner } from '@yudiel/react-qr-scanner';
 
-import s from './QrCodeScanner.module.css';
+import s from './QrCodeScanner.module.scss';
 import { useState } from 'react';
 import {SCAN_DATA} from '../../const';
 const QrCodeScanner = () => {
@@ -23,6 +23,7 @@ const QrCodeScanner = () => {
 	return ( 
 		
 		<div className="qrcode-block-wrapper">
+			<p className={s.scan_title}>Наведите камеру на qr-code</p>
 			<Scanner
 				allowMultiple
 				sound
@@ -32,7 +33,8 @@ const QrCodeScanner = () => {
 				onError={(error) => console.log(error?.message)}
 				/>
 
-			<p className="scann-result">{scanedText}</p>
+			<p className={s.scan_result} >{scanedText}</p>
+			
 		</div>
 		
 	);

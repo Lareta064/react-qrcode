@@ -2,13 +2,15 @@ import { Routes, Route} from "react-router-dom";
 import QrCodeGenerator from "./components/QrCodeGenerator/QrCodeGenerator";
 import QrCodeScanner from "./components/QrCodeScanner/QrScanner";
 import Navigation from './components/Navigation/Navigation';
-import "./style.css";
+import "./style.scss";
 import GenerateHistory from "./components/GenerateHistory";
 import ScanHistory from "./components/ScanHistory";
+import Header from "./components/Header/Header";
 
 const Layout = () => {
 	return (
 		<div className="page-content">
+			<Header/>	
 			<Navigation/>
 			<div className="qr-content">
 				<Routes>

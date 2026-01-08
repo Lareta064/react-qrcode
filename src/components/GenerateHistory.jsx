@@ -5,17 +5,18 @@ const GenerateHistory = () => {
 	console.log(data);
 	return ( 
 		<div className="hist-wrapper">
-			<ul className="hist-list">
-				{
-					data.map((item, i)=>(
-						<li  key={i} className="hist-item">
-							<p>{item}</p>
-							<QRCodeSVG value={item} />
-							
-						</li>
-					))
-				}
-			</ul>
+			<div className="container">	
+				<ul className="hist-list">
+					{
+						data.map((item, i)=>(
+							<li  key={i} className="hist-item">
+								<QRCodeSVG value={item} />
+								<p>{item}</p>
+							</li>
+						))
+					}
+				</ul>
+			</div>
 		</div>
 		
 	 );
