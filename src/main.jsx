@@ -12,7 +12,7 @@ import { Layout } from './Layout';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 
-   <BrowserRouter>
+   <BrowserRouter basename="/react-qrcode">
       <Layout />
     </BrowserRouter>
 
