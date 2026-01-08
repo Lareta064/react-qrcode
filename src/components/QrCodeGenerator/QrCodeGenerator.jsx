@@ -29,11 +29,11 @@ const QrCodeGenerator = () => {
 				
 			</div>
 			<div className="form-item">
-				<label className="form-label">Введите текст, что бы сгенерировать для него qr-code</label>
+				<label className="form-label">Text to generate</label>
 				<input type="text"  value={value} onChange={onChangeHandler} />
 			</div>
 			<div className="form-btn">
-				<button  className="btn" type="button" onClick={onClickHandler} >Генерировать QR</button>
+				<button  className="btn" type="button" onClick={onClickHandler} >Generate</button>
 			</div>
 		</div>
 	 );

@@ -23,7 +23,7 @@ const QrCodeScanner = () => {
 	return ( 
 		
 		<div className="qrcode-block-wrapper">
-			<p className={s.scan_title}>Наведите камеру на qr-code</p>
+			<p className={s.scan_title}>Point the camera at the qr code</p>
 			<Scanner
 				// allowMultiple
 				sound

@@ -6,10 +6,10 @@ const Navigation = () => {
 	return (
 		<div className="container">
 			<nav className="page-nav">
-				<NavLink to="/" end className={({isActive}) => isActive ? thisActiveClass : thisClass}>Генерировать </NavLink>
-				<NavLink to="/scan" className={({isActive}) => isActive ? thisActiveClass : thisClass}>Сканировать </NavLink>
-				<NavLink to="/genhistory" className={({isActive}) => isActive ? thisActiveClass : thisClass}>История генерирования </NavLink>
-				<NavLink to="/scanhistory" className={({isActive}) => isActive ? thisActiveClass : thisClass}>История сканирования</NavLink>
+				<NavLink to="/" end className={({isActive}) => isActive ? thisActiveClass : thisClass}>Generate the QR</NavLink>
+				<NavLink to="/scan" className={({isActive}) => isActive ? thisActiveClass : thisClass}>Scan the QR</NavLink>
+				<NavLink to="/genhistory" className={({isActive}) => isActive ? thisActiveClass : thisClass}>Generation history</NavLink>
+				<NavLink to="/scanhistory" className={({isActive}) => isActive ? thisActiveClass : thisClass}>Scan history</NavLink>
 			</nav>
 		</div>
 	 );
