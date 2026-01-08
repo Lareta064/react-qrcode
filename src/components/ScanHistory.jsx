@@ -13,7 +13,6 @@ const ScanHistory = () => {
 						<li  key={i} className="hist-item">
 							<p>{item}</p>
 							<QRCodeSVG value={item} />
-							
 						</li>
 					))
 				}

@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Navigation = () => {
+	const thisClass = 'page-nav-item';
+	const thisActiveClass = 'page-nav-item page-nav-item--active';
 	return (
 		<div className="container">
 			<nav className="page-nav">
-				<Link to="/generate">Генерировать </Link>
-				<Link to="/scan">Сканировать </Link>
-				<Link to="/genhistory">История генерирования </Link>
-				<Link to="/scanhistory">История сканирования</Link>
+				<NavLink to="/" className={({isActive}) => isActive ? thisActiveClass : thisClass}>Генерировать </NavLink>
+				<NavLink to="/scan" className={({isActive}) => isActive ? thisActiveClass : thisClass}>Сканировать </NavLink>
+				<NavLink to="/genhistory" className={({isActive}) => isActive ? thisActiveClass : thisClass}>История генерирования </NavLink>
+				<NavLink to="/scanhistory" className={({isActive}) => isActive ? thisActiveClass : thisClass}>История сканирования</NavLink>
 			</nav>
 		</div>
 	 );

@@ -48,15 +48,26 @@ body{
 }
 .page-nav{
 	display: flex;
-	column-gap: 40px;
 	justify-content: center;
+	
 }
-.page-nav a{
+.page-nav-item{
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 12px;
 	text-transform: uppercase;
 	color: #1b1b1b;
-
+	padding-block: 12px;
+	padding-inline:24px;
+	border: 1px solid transparent;
+	border-bottom: 1px solid #dedede;
+	border-radius: 5px 5px 0 0;
+	height: 40px;
+}
+.page-nav-item.page-nav-item--active{
+	color:rgb(21, 57, 204);
+	text-shadow: .5px .5px rgb(21, 57, 204);
+	border: 1px solid #dedede;
+	border-bottom-color: transparent;
 }
 .hist-wrapper{
 	width: 100%;
